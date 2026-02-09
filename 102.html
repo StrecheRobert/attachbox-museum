@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sala 102 – Renaștere & Portrete</title>
-  <meta name="description" content="Ghid – Sala 102: Renaștere & Portrete (conținut demonstrativ)" />
+  <title>Sala 102 — Renaștere & Portret</title>
+  <meta name="description" content="Sala 102 — Renaștere & Portret" />
   <style>
     :root{
       --bg:#07121a;
-      --card: rgba(255,255,255,.08);
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.72);
       --muted2: rgba(255,255,255,.58);
       --line: rgba(255,255,255,.14);
-      --accent: #06b6d4;  /* cyan */
-      --accent2:#f59e0b;  /* amber */
+      --accent: #06b6d4;
+      --accent2:#f59e0b;
       --shadow: 0 22px 70px rgba(0,0,0,.35);
       --radius: 18px;
     }
@@ -56,10 +55,10 @@
     .heroGrid{display:grid;grid-template-columns: 1.1fr .9fr}
     @media (max-width: 900px){.heroGrid{grid-template-columns:1fr}}
     .heroImg{
-      min-height:280px;
+      min-height:300px;
       background:
-        linear-gradient(90deg, rgba(7,18,26,.15), rgba(7,18,26,.70)),
-        url("https://images.unsplash.com/photo-1520694478160-2f1ecf2faad8?auto=format&fit=crop&w=1400&q=80");
+        linear-gradient(90deg, rgba(7,18,26,.10), rgba(7,18,26,.75)),
+        url("https://images.unsplash.com/photo-1520694478160-2f1ecf2faad8?auto=format&fit=crop&w=1600&q=80");
       background-size:cover;background-position:center;
     }
     .heroContent{padding:18px 18px 20px}
@@ -117,6 +116,20 @@
       display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
     }
     .spark{width:10px;height:10px;border-radius:999px;background:var(--accent2);box-shadow:0 0 0 6px rgba(245,158,11,.12)}
+    .videoWrap{
+      position:relative;
+      width:100%;
+      aspect-ratio: 16 / 9;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+    }
+    .videoWrap iframe{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      border:0;
+    }
   </style>
 </head>
 <body>
@@ -125,25 +138,24 @@
       <div class="pill">
         <span class="dot"></span>
         <div>
-          <div style="font-weight:650">AttachBox · Ghid muzeu</div>
-          <div class="small">Sala detectată: <strong>102</strong> (demo)</div>
+          <div style="font-weight:650">Ghid muzeu</div>
+          <div class="small">Sala <strong>102</strong> — Renaștere & Portret</div>
         </div>
       </div>
 
-      <a class="btn" href="index.html" title="Înapoi la lista sălilor">
-        ← Înapoi
-      </a>
+      <a class="btn" href="index.html" title="Înapoi la meniul muzeului">← Înapoi</a>
     </div>
 
     <section class="hero">
       <div class="heroGrid">
         <div class="heroImg" aria-hidden="true"></div>
         <div class="heroContent">
-          <span class="kicker">🎨 Expoziție · Portrete & tehnici</span>
-          <h1>Sala 102 — Renaștere & Portrete</h1>
+          <span class="kicker">🎨 Secolele XV–XVI · Portret · lumină · perspectivă</span>
+          <h1>Sala 102 — Renaștere & Portret</h1>
           <p>
-            În această sală explorăm apariția portretului „modern”: lumină, perspectivă și
-            interes pentru individualitate. Conținutul este <em>fictiv</em> și poate fi înlocuit cu descrieri reale.
+            Renașterea schimbă felul în care artiștii privesc chipul uman: proporții, anatomie, volum și
+            o nouă atenție pentru individualitate. În această sală, portretul devine un „document” vizual:
+            statut, profesie, caracter.
           </p>
 
           <div class="facts">
@@ -152,20 +164,21 @@
               <div class="value">10–15 min</div>
             </div>
             <div class="fact">
-              <div class="label">Stiluri</div>
-              <div class="value">Ulei · tempera</div>
+              <div class="label">Tehnici</div>
+              <div class="value">Sfumato · clarobscur</div>
             </div>
             <div class="fact">
-              <div class="label">Focus</div>
-              <div class="value">Portret & lumină</div>
+              <div class="label">Teme</div>
+              <div class="value">Portret · spațiu</div>
             </div>
           </div>
 
           <div class="hr"></div>
 
           <div class="callout">
-            <strong>Ghid rapid:</strong> începe cu portretul din stânga (galerie), apoi urmărește cum se schimbă umbrele
-            între lucrări. Observă conturul ochilor și direcția luminii.
+            <strong>Privire ghidată</strong><br/>
+            Observă direcția luminii (frunte–pomeți–bărbie), apoi trecerile dintre tonuri.
+            În fundal, caută indicii despre identitatea personajului.
           </div>
         </div>
       </div>
@@ -174,48 +187,47 @@
     <section class="content">
       <article class="card">
         <div class="cardHeader">
-          <div class="cardTitle">Galerie (demo)</div>
-          <div class="badge">3 piese</div>
+          <div class="cardTitle">Galerie</div>
+          <div class="badge">Selecție</div>
         </div>
         <div class="cardBody">
           <div class="gallery">
-            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1520975693416-35a8d8a8b4b0?auto=format&fit=crop&w=900&q=80')" title="Portret 1"></div>
-            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1520694478160-2f1ecf2faad8?auto=format&fit=crop&w=900&q=80')" title="Portret 2"></div>
-            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1458530970867-aaa3700e966d?auto=format&fit=crop&w=900&q=80')" title="Portret 3"></div>
+            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=900&q=80')" title="Portret"></div>
+            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1458530970867-aaa3700e966d?auto=format&fit=crop&w=900&q=80')" title="Detaliu"></div>
+            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1520975693416-35a8d8a8b4b0?auto=format&fit=crop&w=900&q=80')" title="Atelier"></div>
           </div>
 
           <div class="hr"></div>
 
-          <p class="small">
-            Pentru imagini locale (fără internet), pune fișierele în repo și folosește rute relative (ex. <code>img/portret1.jpg</code>).
-          </p>
+          <div class="callout">
+            <strong>Detaliu de urmărit</strong><br/>
+            Conturul ochilor și marginea buzelor sunt adesea „îndulcite” prin treceri fine — efectul de volum
+            se construiește fără linii dure.
+          </div>
         </div>
       </article>
 
       <aside class="card">
         <div class="cardHeader">
-          <div class="cardTitle">Tehnici & detalii</div>
-          <div class="badge" style="background:rgba(245,158,11,.16)">Atelier</div>
+          <div class="cardTitle">Video</div>
+          <div class="badge" style="background:rgba(245,158,11,.16)">YouTube</div>
         </div>
         <div class="cardBody">
-          <p>
-            Pictorii epocii au perfecționat trecerile de la lumină la umbră pentru a reda volum și textură.
-            În portrete, detaliile „mici” (mâneci, broderii, fundaluri) comunicau statutul social.
+          <div class="videoWrap">
+            <!-- Smarthistory: How to recognize Italian Renaissance art -->
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/6YiL9MNyGKE"
+              title="How to recognize Italian Renaissance art"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="hr"></div>
+
+          <p class="small">
+            Dacă nu pornește în WebView: verifică să ai internet activ; unele telefoane cer și acceptarea cookie-urilor YouTube.
           </p>
-
-          <div class="hr"></div>
-
-          <div class="callout">
-            <strong>Detaliu de urmărit:</strong><br/>
-            compară reflexia luminii în zona frunții și a pomeților. E o tehnică tipică pentru a sugera profunzime.
-          </div>
-
-          <div class="hr"></div>
-
-          <div class="callout">
-            <strong>Întrebare pentru vizitator:</strong><br/>
-            ce element din portret ți se pare că spune cel mai mult despre personaj? Expresia, postura sau fundalul?
-          </div>
         </div>
       </aside>
     </section>
@@ -224,11 +236,11 @@
       <div style="display:flex;align-items:center;gap:10px">
         <span class="spark"></span>
         <div>
-          <div style="font-weight:650">Conținut demonstrativ</div>
-          <div class="small">Poți edita pagina în GitHub și se actualizează instant în WebView.</div>
+          <div style="font-weight:650">Muzeu · Sala 102</div>
+          <div class="small">Renaștere & Portret</div>
         </div>
       </div>
-      <div class="small">AttachBox · GitHub Pages</div>
+      <div class="small">AttachBox</div>
     </div>
   </div>
 </body>
