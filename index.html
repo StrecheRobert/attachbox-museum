@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
-  <meta charset="utf-8">
-  <title>AttachBox Museum</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AttachBox Museum</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 24px;
+            text-align: center;
+        }
+
+        main {
+            padding: 24px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .room {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .room:hover {
+            transform: translateY(-3px);
+        }
+
+        .room h2 {
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 16px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background: #1a252f;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>AttachBox Museum</h1>
-  <p>GitHub Pages activ.</p>
+<header>
+    <h1>AttachBox Museum</h1>
+    <p>Ghid digital al expozițiilor</p>
+</header>
+
+<main>
+    <div class="room">
+        <h2>Sala 101 – Arta Medievală</h2>
+        <p>Descoperă sculpturi, manuscrise și artefacte religioase din Evul Mediu.</p>
+        <a class="btn" href="101.html">Intră în sală</a>
+    </div>
+
+    <div class="room">
+        <h2>Sala 102 – Arta Modernă</h2>
+        <p>Lucrări de pictură și sculptură din secolele XIX–XX.</p>
+        <a class="btn" href="102.html">Intră în sală</a>
+    </div>
+</main>
 </body>
 </html>
