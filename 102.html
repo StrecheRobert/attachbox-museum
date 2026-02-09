@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sala 102 – Renaștere & Portrete</title>
+  <meta name="description" content="Ghid – Sala 102: Renaștere & Portrete (conținut demonstrativ)" />
+  <style>
+    :root{
+      --bg:#07121a;
+      --card: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.58);
+      --line: rgba(255,255,255,.14);
+      --accent: #06b6d4;  /* cyan */
+      --accent2:#f59e0b;  /* amber */
+      --shadow: 0 22px 70px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 700px at 10% 0%, rgba(6,182,212,.45), transparent 60%),
+        radial-gradient(900px 600px at 120% 20%, rgba(245,158,11,.26), transparent 60%),
+        radial-gradient(900px 700px at 50% 120%, rgba(59,130,246,.18), transparent 60%),
+        var(--bg);
+      min-height:100vh;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:18px 16px 40px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 14px}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 12px; border:1px solid var(--line);
+      border-radius:999px; background:rgba(255,255,255,.04);
+      backdrop-filter: blur(10px);
+    }
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 6px rgba(6,182,212,.12)}
+    .small{font-size:13px;color:var(--muted2)}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 12px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.06); color:inherit; text-decoration:none;
+    }
+    .btn:hover{background:rgba(255,255,255,.10)}
+    .hero{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+    }
+    .heroGrid{display:grid;grid-template-columns: 1.1fr .9fr}
+    @media (max-width: 900px){.heroGrid{grid-template-columns:1fr}}
+    .heroImg{
+      min-height:280px;
+      background:
+        linear-gradient(90deg, rgba(7,18,26,.15), rgba(7,18,26,.70)),
+        url("https://images.unsplash.com/photo-1520694478160-2f1ecf2faad8?auto=format&fit=crop&w=1400&q=80");
+      background-size:cover;background-position:center;
+    }
+    .heroContent{padding:18px 18px 20px}
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      font-size:13px;color:rgba(255,255,255,.78);
+      padding:6px 10px;border-radius:999px;border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+    }
+    h1{margin:12px 0 6px;font-size:28px;letter-spacing:-.02em}
+    p{margin:0;color:var(--muted);line-height:1.55}
+    .facts{margin-top:14px;display:grid;grid-template-columns: repeat(3,1fr);gap:10px}
+    @media (max-width:650px){.facts{grid-template-columns:1fr}}
+    .fact{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.04);padding:12px}
+    .fact .label{font-size:12px;color:var(--muted2)}
+    .fact .value{font-size:16px;margin-top:2px}
+    .content{margin-top:14px;display:grid;grid-template-columns: 1fr 1fr;gap:14px}
+    @media (max-width:900px){.content{grid-template-columns:1fr}}
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.05);
+      overflow:hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .cardHeader{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .cardTitle{font-weight:650}
+    .badge{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);background: rgba(6,182,212,.16)}
+    .cardBody{padding:14px 16px}
+    .gallery{display:grid;grid-template-columns: repeat(3,1fr);gap:10px}
+    @media (max-width:650px){.gallery{grid-template-columns:1fr}}
+    .gimg{
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      overflow:hidden;
+      aspect-ratio: 4 / 3;
+      background-size:cover;
+      background-position:center;
+    }
+    .callout{
+      border:1px dashed rgba(255,255,255,.18);
+      background: rgba(255,255,255,.03);
+      border-radius: 16px;
+      padding:12px;
+      color:var(--muted);
+    }
+    .hr{height:1px;background:var(--line);margin:12px 0}
+    .footer{
+      margin-top:14px;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      color:var(--muted2);
+      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    }
+    .spark{width:10px;height:10px;border-radius:999px;background:var(--accent2);box-shadow:0 0 0 6px rgba(245,158,11,.12)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="pill">
+        <span class="dot"></span>
+        <div>
+          <div style="font-weight:650">AttachBox · Ghid muzeu</div>
+          <div class="small">Sala detectată: <strong>102</strong> (demo)</div>
+        </div>
+      </div>
+
+      <a class="btn" href="index.html" title="Înapoi la lista sălilor">
+        ← Înapoi
+      </a>
+    </div>
+
+    <section class="hero">
+      <div class="heroGrid">
+        <div class="heroImg" aria-hidden="true"></div>
+        <div class="heroContent">
+          <span class="kicker">🎨 Expoziție · Portrete & tehnici</span>
+          <h1>Sala 102 — Renaștere & Portrete</h1>
+          <p>
+            În această sală explorăm apariția portretului „modern”: lumină, perspectivă și
+            interes pentru individualitate. Conținutul este <em>fictiv</em> și poate fi înlocuit cu descrieri reale.
+          </p>
+
+          <div class="facts">
+            <div class="fact">
+              <div class="label">Durată recomandată</div>
+              <div class="value">10–15 min</div>
+            </div>
+            <div class="fact">
+              <div class="label">Stiluri</div>
+              <div class="value">Ulei · tempera</div>
+            </div>
+            <div class="fact">
+              <div class="label">Focus</div>
+              <div class="value">Portret & lumină</div>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="callout">
+            <strong>Ghid rapid:</strong> începe cu portretul din stânga (galerie), apoi urmărește cum se schimbă umbrele
+            între lucrări. Observă conturul ochilor și direcția luminii.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <article class="card">
+        <div class="cardHeader">
+          <div class="cardTitle">Galerie (demo)</div>
+          <div class="badge">3 piese</div>
+        </div>
+        <div class="cardBody">
+          <div class="gallery">
+            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1520975693416-35a8d8a8b4b0?auto=format&fit=crop&w=900&q=80')" title="Portret 1"></div>
+            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1520694478160-2f1ecf2faad8?auto=format&fit=crop&w=900&q=80')" title="Portret 2"></div>
+            <div class="gimg" style="background-image:url('https://images.unsplash.com/photo-1458530970867-aaa3700e966d?auto=format&fit=crop&w=900&q=80')" title="Portret 3"></div>
+          </div>
+
+          <div class="hr"></div>
+
+          <p class="small">
+            Pentru imagini locale (fără internet), pune fișierele în repo și folosește rute relative (ex. <code>img/portret1.jpg</code>).
+          </p>
+        </div>
+      </article>
+
+      <aside class="card">
+        <div class="cardHeader">
+          <div class="cardTitle">Tehnici & detalii</div>
+          <div class="badge" style="background:rgba(245,158,11,.16)">Atelier</div>
+        </div>
+        <div class="cardBody">
+          <p>
+            Pictorii epocii au perfecționat trecerile de la lumină la umbră pentru a reda volum și textură.
+            În portrete, detaliile „mici” (mâneci, broderii, fundaluri) comunicau statutul social.
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="callout">
+            <strong>Detaliu de urmărit:</strong><br/>
+            compară reflexia luminii în zona frunții și a pomeților. E o tehnică tipică pentru a sugera profunzime.
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="callout">
+            <strong>Întrebare pentru vizitator:</strong><br/>
+            ce element din portret ți se pare că spune cel mai mult despre personaj? Expresia, postura sau fundalul?
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="footer">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="spark"></span>
+        <div>
+          <div style="font-weight:650">Conținut demonstrativ</div>
+          <div class="small">Poți edita pagina în GitHub și se actualizează instant în WebView.</div>
+        </div>
+      </div>
+      <div class="small">AttachBox · GitHub Pages</div>
+    </div>
+  </div>
+</body>
+</html>
