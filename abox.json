@@ -2,13 +2,23 @@
   "version": 1,
   "activities": [
     {
+      "id": "welcome",
+      "title": "Welcome to the Museum",
+      "description": "Discover our collections and plan your visit.",
+      "url": "https://strecherobert.github.io/attachbox-museum/index.html",
+      "visible": true,
+      "open_once": false,
+      "triggers": ["tap"],
+      "category": "General"
+    },
+    {
       "id": "room-101",
       "title": "Room 101 — Medieval Art",
       "description": "Explore our Medieval Art collection.",
       "url": "https://strecherobert.github.io/attachbox-museum/101.html",
-      "visible": true,
+      "visible": false,
       "open_once": false,
-      "triggers": ["tap", "beacon"],
+      "triggers": ["beacon"],
       "beacon_ids": ["beacon-room-101"],
       "category": "Exhibits"
     },
@@ -17,9 +27,9 @@
       "title": "Room 102 — Renaissance & Portrait",
       "description": "Discover the Renaissance and Portrait collection.",
       "url": "https://strecherobert.github.io/attachbox-museum/102.html",
-      "visible": true,
+      "visible": false,
       "open_once": false,
-      "triggers": ["tap", "beacon"],
+      "triggers": ["beacon"],
       "beacon_ids": ["beacon-room-102"],
       "category": "Exhibits"
     }
