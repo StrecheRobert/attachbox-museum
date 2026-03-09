@@ -1,82 +1,114 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AttachBox Museum</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AttachBox Museum</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Roboto, Arial, sans-serif;
-            background: #f4f6f8;
-            color: #333;
-        }
+<style>
 
-        header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            color: white;
-            padding: 24px;
-            text-align: center;
-        }
+:root{
+  --bg:#07121a;
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
+  --muted2: rgba(255,255,255,.58);
+  --line: rgba(255,255,255,.14);
+  --accent:#06b6d4;
+  --accent2:#f59e0b;
+}
 
-        main {
-            padding: 24px;
-            max-width: 900px;
-            margin: auto;
-        }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--text);
+  background:
+    radial-gradient(1000px 700px at 10% 0%, rgba(6,182,212,.45), transparent 60%),
+    radial-gradient(900px 600px at 120% 20%, rgba(245,158,11,.26), transparent 60%),
+    radial-gradient(900px 700px at 50% 120%, rgba(59,130,246,.18), transparent 60%),
+    var(--bg);
+  min-height:100vh;
+}
 
-        .room {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 16px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease;
-        }
+header{
+  text-align:center;
+  padding:30px 20px;
+}
 
-        .room:hover {
-            transform: translateY(-3px);
-        }
+header h1{
+  margin:0;
+  font-size:34px;
+}
 
-        .room h2 {
-            margin-top: 0;
-        }
+header p{
+  color:var(--muted);
+  margin-top:6px;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 10px 16px;
-            background: #2c3e50;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
+main{
+  max-width:900px;
+  margin:auto;
+  padding:24px;
+}
 
-        .btn:hover {
-            background: #1a252f;
-        }
-    </style>
+.room{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:16px;
+  background:rgba(255,255,255,.05);
+  backdrop-filter: blur(6px);
+  transition: transform .2s ease, background .2s ease;
+}
+
+.room:hover{
+  transform: translateY(-3px);
+  background:rgba(255,255,255,.08);
+}
+
+.room h2{
+  margin-top:0;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 16px;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--line);
+  border-radius:999px;
+  text-decoration:none;
+  color:white;
+}
+
+.btn:hover{
+  background:rgba(255,255,255,.15);
+}
+
+</style>
 </head>
 
 <body>
+
 <header>
-    <h1>AttachBox Museum</h1>
-    <p>Ghid digital al expozițiilor</p>
+<h1>AttachBox Museum</h1>
+<p>Digital exhibition guide</p>
 </header>
 
 <main>
-    <div class="room">
-        <h2>Sala 101 – Arta Medievală</h2>
-        <p>Descoperă sculpturi, manuscrise și artefacte religioase din Evul Mediu.</p>
-        <a class="btn" href="101.html">Intră în sală</a>
-    </div>
 
-    <div class="room">
-        <h2>Sala 102 – Arta Modernă</h2>
-        <p>Lucrări de pictură și sculptură din secolele XIX–XX.</p>
-        <a class="btn" href="102.html">Intră în sală</a>
-    </div>
+<div class="room">
+<h2>Room 101 — Medieval Art</h2>
+<p>Discover sculptures, manuscripts, and religious artifacts from the medieval period.</p>
+<a class="btn" href="101.html">Enter room</a>
+</div>
+
+<div class="room">
+<h2>Room 102 — Modern Art</h2>
+<p>Paintings and sculptures from the 19th–20th centuries.</p>
+<a class="btn" href="102.html">Enter room</a>
+</div>
+
 </main>
+
 </body>
 </html>
