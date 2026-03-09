@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "activities": [
+    {
+      "id": "room-101",
+      "title": "Room 101 — Medieval Art",
+      "description": "Explore our Medieval Art collection.",
+      "url": "https://strecherobert.github.io/attachbox-museum/101.html",
+      "visible": true,
+      "open_once": false,
+      "triggers": ["tap", "beacon"],
+      "beacon_ids": ["beacon-room-101"],
+      "category": "Exhibits"
+    },
+    {
+      "id": "room-102",
+      "title": "Room 102 — Renaissance & Portrait",
+      "description": "Discover the Renaissance and Portrait collection.",
+      "url": "https://strecherobert.github.io/attachbox-museum/102.html",
+      "visible": true,
+      "open_once": false,
+      "triggers": ["tap", "beacon"],
+      "beacon_ids": ["beacon-room-102"],
+      "category": "Exhibits"
+    }
+  ],
+  "beacons": [
+    {
+      "id": "beacon-room-101",
+      "name": "Room 101 — Medieval Art",
+      "uuid": "ae7101dd-7154-4561-bca1-091919bd7f40",
+      "major": 46172,
+      "minor": 56958,
+      "description": "Beacon in Room 101"
+    },
+    {
+      "id": "beacon-room-102",
+      "name": "Room 102 — Renaissance & Portrait",
+      "uuid": "b9407f30-f5f8-466e-aff9-25556b57fe6d",
+      "major": 49668,
+      "minor": 48887,
+      "description": "Beacon in Room 102"
+    }
+  ]
+}
